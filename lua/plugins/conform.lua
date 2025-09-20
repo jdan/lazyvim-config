@@ -8,7 +8,12 @@ return {
       -- You can customize some of the format options for the filetype (:help conform.format)
       rust = { "rustfmt", lsp_format = "fallback" },
       -- Conform will run the first available formatter
-      javascript = { "prettierd", "prettier", stop_after_first = true },
+      javascript = { "biome" },
+    },
+    formatters = {
+      biome = {
+        require_cwd = true,
+      },
     },
   },
 }
